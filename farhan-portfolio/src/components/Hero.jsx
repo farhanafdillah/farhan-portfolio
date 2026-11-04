@@ -71,9 +71,8 @@ export default function Hero() {
                 src={hero.avatar}
                 alt={`Foto profil ${hero.name}`}
                 fill
-                className="object-cover"
+                className="object-cover object-top"
                 priority
-                unoptimized
               />
             </div>
           </div>

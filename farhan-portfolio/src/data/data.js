@@ -12,14 +12,14 @@ export const siteConfig = {
     id: "Mahasiswa Informatika yang membangun jaringan yang aman dan aplikasi mobile yang berguna.",
     en: "Informatics student building secure networks and useful mobile applications.",
   },
-  url: "https://farhan-portfolio.vercel.app",
-  ogImage: "/images/og-image.png",
+  url: "https://farhan-portfolio-beige.vercel.app",
+  ogImage: "/images/farhan.jpg",
   location: "Ciracas, Jakarta Timur",
   email: "farhanafdillah2435@gmail.com",
   whatsapp: "6285591203070", // Format internasional, jangan ubah format ini
   linkedin: "#",             // Ganti dengan URL LinkedIn kamu
-  github: "#",               // Ganti dengan URL GitHub kamu
-  cv: "/cv-placeholder.pdf", // Ganti dengan path CV kamu
+  github: "https://github.com/farhanafdillah", // Akun GitHub kamu
+  cv: "/cv-farhan.pdf",      // CV asli Farhan
 };
 
 export const navLinks = [
@@ -42,7 +42,7 @@ export const hero = {
     projects: { id: "Lihat Proyek", en: "View Projects" },
     cv:        { id: "Download CV",  en: "Download CV" },
   },
-  avatar: "/images/avatar-placeholder.svg",
+  avatar: "/images/farhan.jpg",
 };
 
 export const about = {

@@ -27,7 +27,7 @@ export const navLinks = [
   { id: "skills",         label: { id: "Skills",          en: "Skills" } },
   { id: "projects",       label: { id: "Proyek",          en: "Projects" } },
   { id: "education",      label: { id: "Pendidikan",      en: "Education" } },
-  { id: "certifications", label: { id: "Sertifikasi",     en: "Certs" } },
+  { id: "certifications", label: { id: "Sertifikasi",     en: "Certifications" } },
   { id: "contact",        label: { id: "Kontak",          en: "Contact" } },
 ];
 

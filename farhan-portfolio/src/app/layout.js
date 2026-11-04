@@ -8,12 +8,12 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: siteConfig.title.id,
-  description: siteConfig.description.id,
+  title: siteConfig.title.en,
+  description: siteConfig.description.en,
   keywords: [
-    "portofolio",
-    "mahasiswa informatika",
-    "magang IT",
+    "portfolio",
+    "informatics student",
+    "IT internship",
     "flutter",
     "cisco",
     "mikrotik",
@@ -21,8 +21,8 @@ export const metadata = {
     "Farhan Bayna Afdillah",
   ],
   openGraph: {
-    title: siteConfig.title.id,
-    description: siteConfig.description.id,
+    title: siteConfig.title.en,
+    description: siteConfig.description.en,
     url: siteConfig.url,
     siteName: siteConfig.name,
     images: [
@@ -37,14 +37,14 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.title.id,
-    description: siteConfig.description.id,
+    title: siteConfig.title.en,
+    description: siteConfig.description.en,
   },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="id" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.variable}>
         <ThemeProvider>
           <LangProvider>{children}</LangProvider>

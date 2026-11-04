@@ -1,12 +1,31 @@
 "use client";
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const LangContext = createContext();
 
 export function LangProvider({ children }) {
-  const [lang, setLang] = useState("id");
-  const toggle = () => setLang((l) => (l === "id" ? "en" : "id"));
-  const t = (obj) => (obj && typeof obj === "object" ? obj[lang] ?? obj.id : obj);
+  const [lang, setLang] = useState("en");
+
+  useEffect(() => {
+    const stored = localStorage.getItem("preferred_lang");
+    if (stored) {
+      setLang(stored);
+    }
+  }, []);
+
+  const toggle = () => {
+    setLang((prev) => {
+      const next = prev === "en" ? "id" : "en";
+      localStorage.setItem("preferred_lang", next);
+      return next;
+    });
+  };
+
+  const t = (obj) => {
+    if (!obj || typeof obj !== "object") return obj;
+    return obj[lang] ?? obj.en ?? obj.id;
+  };
+
   return (
     <LangContext.Provider value={{ lang, toggle, t }}>
       {children}

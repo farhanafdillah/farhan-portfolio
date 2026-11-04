@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <!-- OSPF cloud -->
+  <circle cx="150" cy="190" r="70" fill="none" stroke="#06b6d4" stroke-width="2" opacity="0.8"/>
+  <circle cx="150" cy="190" r="70" fill="#06b6d4" opacity="0.05"/>
+  <text x="150" y="183" font-family="Arial" font-size="14" fill="#06b6d4" text-anchor="middle" font-weight="bold">OSPF</text>
+  <text x="150" y="200" font-family="Arial" font-size="10" fill="#94a3b8" text-anchor="middle">Area 0</text>
+  <text x="150" y="215" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">10.1.0.0/24</text>
+  <!-- OSPF routers -->
+  <circle cx="110" cy="150" r="12" fill="#06b6d4" opacity="0.6"/>
+  <circle cx="185" cy="150" r="12" fill="#06b6d4" opacity="0.6"/>
+  <circle cx="150" cy="240" r="12" fill="#06b6d4" opacity="0.6"/>
+  <line x1="110" y1="150" x2="185" y2="150" stroke="#06b6d4" stroke-width="1.5" opacity="0.4"/>
+  <line x1="110" y1="150" x2="150" y2="240" stroke="#06b6d4" stroke-width="1.5" opacity="0.4"/>
+  <line x1="185" y1="150" x2="150" y2="240" stroke="#06b6d4" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Redistribution router center -->
+  <rect x="330" y="155" width="140" height="90" rx="12" fill="#1e3a5f" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="400" y="186" font-family="Arial" font-size="12" fill="#f59e0b" text-anchor="middle" font-weight="bold">ASBR Router</text>
+  <text x="400" y="203" font-family="Arial" font-size="10" fill="#94a3b8" text-anchor="middle">Route Redistrib.</text>
+  <text x="400" y="220" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">Cisco IOS</text>
+  <text x="400" y="236" font-family="Arial" font-size="9" fill="#f59e0b" text-anchor="middle">↔ OSPF / EIGRP</text>
+
+  <!-- EIGRP cloud -->
+  <circle cx="650" cy="190" r="70" fill="none" stroke="#8b5cf6" stroke-width="2" opacity="0.8"/>
+  <circle cx="650" cy="190" r="70" fill="#8b5cf6" opacity="0.05"/>
+  <text x="650" y="183" font-family="Arial" font-size="14" fill="#8b5cf6" text-anchor="middle" font-weight="bold">EIGRP</text>
+  <text x="650" y="200" font-family="Arial" font-size="10" fill="#94a3b8" text-anchor="middle">AS 100</text>
+  <text x="650" y="215" font-family="Arial" font-size="9" fill="#64748b" text-anchor="middle">172.16.0.0/24</text>
+  <!-- EIGRP routers -->
+  <circle cx="615" cy="150" r="12" fill="#8b5cf6" opacity="0.6"/>
+  <circle cx="685" cy="150" r="12" fill="#8b5cf6" opacity="0.6"/>
+  <circle cx="650" cy="240" r="12" fill="#8b5cf6" opacity="0.6"/>
+  <line x1="615" y1="150" x2="685" y2="150" stroke="#8b5cf6" stroke-width="1.5" opacity="0.4"/>
+  <line x1="615" y1="150" x2="650" y2="240" stroke="#8b5cf6" stroke-width="1.5" opacity="0.4"/>
+  <line x1="685" y1="150" x2="650" y2="240" stroke="#8b5cf6" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Connections OSPF -> ASBR -->
+  <line x1="220" y1="190" x2="330" y2="200" stroke="#06b6d4" stroke-width="2" stroke-dasharray="8,4" opacity="0.8"/>
+  <polygon points="323,194 338,200 323,206" fill="#06b6d4" opacity="0.8"/>
+
+  <!-- Connections EIGRP <- ASBR -->
+  <line x1="470" y1="200" x2="580" y2="190" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="8,4" opacity="0.8"/>
+  <polygon points="577,184 592,190 577,196" fill="#8b5cf6" opacity="0.8"/>
+
+  <!-- Route table snippet -->
+  <rect x="295" y="275" width="210" height="80" rx="8" fill="#0f172a" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="310" y="293" font-family="monospace" font-size="9" fill="#64748b">Routing Table:</text>
+  <text x="310" y="307" font-family="monospace" font-size="8" fill="#06b6d4">O 10.1.0.0/24 via 10.0.0.1</text>
+  <text x="310" y="320" font-family="monospace" font-size="8" fill="#8b5cf6">D 172.16.0.0/24 via 10.0.0.2</text>
+  <text x="310" y="333" font-family="monospace" font-size="8" fill="#f59e0b">R* 0.0.0.0/0 [120/1]</text>
+  <text x="310" y="346" font-family="monospace" font-size="8" fill="#22c55e">Status: Connected ✓</text>
+
+  <!-- Label -->
+  <rect x="200" y="368" width="400" height="22" rx="5" fill="#f59e0b" opacity="0.08"/>
+  <text x="400" y="384" font-family="Arial" font-size="13" fill="#f59e0b" text-anchor="middle" font-weight="bold">OSPF ↔ EIGRP Route Redistribution</text>
+</svg>

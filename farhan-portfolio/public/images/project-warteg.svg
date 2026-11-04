@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <!-- Phone frame -->
+  <rect x="280" y="30" width="240" height="340" rx="28" fill="#1e293b" stroke="#06b6d4" stroke-width="2.5"/>
+  <!-- Screen -->
+  <rect x="295" y="65" width="210" height="280" rx="8" fill="#0f172a"/>
+  <!-- Notch -->
+  <rect x="365" y="38" width="70" height="16" rx="8" fill="#0f172a"/>
+  <!-- App header -->
+  <rect x="295" y="65" width="210" height="45" rx="0" fill="#06b6d4" opacity="0.15"/>
+  <text x="400" y="93" font-family="Arial" font-size="13" fill="#06b6d4" text-anchor="middle" font-weight="bold">🍚 Menu Warteg</text>
+  <!-- Menu items -->
+  <rect x="305" y="120" width="190" height="40" rx="8" fill="#1e293b" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="320" y="137" font-family="Arial" font-size="11" fill="white">🍛  Nasi Padang</text>
+  <text x="460" y="137" font-family="Arial" font-size="10" fill="#06b6d4" text-anchor="end">Rp 15.000</text>
+  <text x="320" y="152" font-family="Arial" font-size="9" fill="#64748b">Tersedia</text>
+
+  <rect x="305" y="168" width="190" height="40" rx="8" fill="#1e293b" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="320" y="185" font-family="Arial" font-size="11" fill="white">🐟  Ikan Bakar</text>
+  <text x="460" y="185" font-family="Arial" font-size="10" fill="#06b6d4" text-anchor="end">Rp 20.000</text>
+  <text x="320" y="200" font-family="Arial" font-size="9" fill="#64748b">Tersedia</text>
+
+  <rect x="305" y="216" width="190" height="40" rx="8" fill="#1e293b" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="320" y="233" font-family="Arial" font-size="11" fill="white">🥦  Sayur Asem</text>
+  <text x="460" y="233" font-family="Arial" font-size="10" fill="#06b6d4" text-anchor="end">Rp 8.000</text>
+  <text x="320" y="248" font-family="Arial" font-size="9" fill="#64748b">Tersedia</text>
+
+  <!-- Order button -->
+  <rect x="305" y="295" width="190" height="36" rx="10" fill="#06b6d4"/>
+  <text x="400" y="318" font-family="Arial" font-size="13" fill="white" text-anchor="middle" font-weight="bold">Pesan Sekarang</text>
+
+  <!-- Tech labels -->
+  <rect x="80" y="140" width="130" height="30" rx="6" fill="#3b82f6" opacity="0.15" stroke="#3b82f6" stroke-width="1"/>
+  <text x="145" y="160" font-family="Arial" font-size="12" fill="#3b82f6" text-anchor="middle" font-weight="bold">Flutter (Front-end)</text>
+  <line x1="210" y1="155" x2="280" y2="200" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
+
+  <rect x="590" y="140" width="130" height="30" rx="6" fill="#8b5cf6" opacity="0.15" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="655" y="160" font-family="Arial" font-size="12" fill="#8b5cf6" text-anchor="middle" font-weight="bold">PHP (Back-end)</text>
+  <line x1="590" y1="155" x2="520" y2="200" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
+
+  <!-- Label -->
+  <rect x="200" y="355" width="400" height="28" rx="6" fill="#06b6d4" opacity="0.1"/>
+  <text x="400" y="374" font-family="Arial" font-size="14" fill="#06b6d4" text-anchor="middle" font-weight="bold">Warteg Menu Ordering App — Flutter + PHP</text>
+</svg>

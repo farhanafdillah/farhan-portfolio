@@ -10,7 +10,7 @@ export default function ContactCard({ onOpenContact }) {
     <motion.div
       whileHover={{ y: -4 }}
       transition={{ duration: 0.3 }}
-      className="bento-card p-6 sm:p-7 flex flex-col justify-between relative overflow-hidden group"
+      className="bento-card p-6 sm:p-7 flex flex-col justify-between relative overflow-hidden group h-full"
     >
       {/* Background ambient glow */}
       <div className="absolute top-1/2 -right-8 w-44 h-44 bg-purple-600/15 rounded-full blur-3xl pointer-events-none" />

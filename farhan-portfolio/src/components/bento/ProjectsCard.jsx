@@ -10,7 +10,7 @@ export default function ProjectsCard({ onSelectProject, onViewAll }) {
     <motion.div
       whileHover={{ y: -4 }}
       transition={{ duration: 0.3 }}
-      className="bento-card p-6 sm:p-7 flex flex-col justify-between relative overflow-hidden"
+      className="bento-card p-6 sm:p-7 flex flex-col justify-between relative overflow-hidden h-full"
     >
       {/* Header */}
       <div className="flex items-center justify-between mb-5">

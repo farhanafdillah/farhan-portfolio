@@ -8,7 +8,7 @@ export default function AboutCard({ onLearnMore }) {
     <motion.div
       whileHover={{ y: -4 }}
       transition={{ duration: 0.3 }}
-      className="bento-card p-6 sm:p-7 flex flex-col justify-between relative overflow-hidden group cursor-pointer"
+      className="bento-card p-6 sm:p-7 flex flex-col justify-between relative overflow-hidden group cursor-pointer h-full"
       onClick={onLearnMore}
     >
       {/* Background soft glow on hover */}

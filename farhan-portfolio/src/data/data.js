@@ -48,8 +48,8 @@ export const hero = {
 export const about = {
   title: { id: "Tentang Saya", en: "About Me" },
   body: {
-    id: "Saya adalah Mahasiswa Informatika semester 6 di Universitas Bina Sarana Informatika (2023–sekarang) dengan minat kuat pada IT dan programming. Berpengalaman mendesain dan mengamankan topologi jaringan dengan Cisco dan Mikrotik, serta membangun aplikasi mobile dengan Flutter dan PHP. Aktif dalam kepanitiaan acara kampus dan sedang mencari magang IT/programming untuk menerapkan dan mengembangkan kemampuan saya di lingkungan kerja nyata.",
-    en: "I am a 6th-semester Informatics student at Universitas Bina Sarana Informatika (2023–present) with a strong interest in IT and programming. Experienced in designing and securing network topologies using Cisco and Mikrotik, and in building mobile applications with Flutter and PHP. I am actively involved in campus event committees and am seeking an IT/programming internship to apply and grow my skills in a real work environment.",
+    id: "Saya adalah Mahasiswa Informatika semester 7 di Universitas Bina Sarana Informatika (2023–sekarang) dengan minat kuat pada IT dan programming. Berpengalaman mendesain dan mengamankan topologi jaringan dengan Cisco dan Mikrotik, serta membangun aplikasi mobile dengan Flutter dan PHP. Aktif dalam kepanitiaan acara kampus dan sedang mencari magang IT/programming untuk menerapkan dan mengembangkan kemampuan saya di lingkungan kerja nyata.",
+    en: "I am a 7th-semester Informatics student at Universitas Bina Sarana Informatika (2023–present) with a strong interest in IT and programming. Experienced in designing and securing network topologies using Cisco and Mikrotik, and in building mobile applications with Flutter and PHP. I am actively involved in campus event committees and am seeking an IT/programming internship to apply and grow my skills in a real work environment.",
   },
   highlights: [
     { icon: "GraduationCap", label: { id: "Informatika — UBSI",      en: "Informatics — UBSI" } },
@@ -174,7 +174,7 @@ export const education = {
     {
       type: "education",
       institution: { id: "Universitas Bina Sarana Informatika", en: "Universitas Bina Sarana Informatika" },
-      degree: { id: "S1 Informatika — Semester 6", en: "Bachelor of Informatics — Semester 6" },
+      degree: { id: "S1 Informatika — Semester 7", en: "Bachelor of Informatics — Semester 7" },
       period: "2023 — Sekarang",
       description: {
         id: "Mempelajari dasar-dasar ilmu komputer, jaringan komputer, pemrograman mobile, dan rekayasa perangkat lunak.",

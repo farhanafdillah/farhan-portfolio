@@ -1,54 +1,51 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/context/ThemeContext";
-import { LangProvider } from "@/context/LangContext";
-import { siteConfig } from "@/data/data";
+import { personalInfo } from "@/data/portfolioData";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata = {
-  metadataBase: new URL(siteConfig.url),
-  title: siteConfig.title.en,
-  description: siteConfig.description.en,
+  metadataBase: new URL("https://farhan-portfolio-beige.vercel.app"),
+  title: `${personalInfo.name} — ${personalInfo.role}`,
+  description: personalInfo.tagline,
   keywords: [
-    "portfolio",
-    "informatics student",
-    "IT internship",
-    "flutter",
-    "cisco",
-    "mikrotik",
-    "jakarta",
-    "Farhan Bayna Afdillah",
+    "Farhan",
+    "Web Developer",
+    "Portfolio",
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "Frontend Developer",
+    "Informatics Student",
+    "Jakarta",
   ],
   openGraph: {
-    title: siteConfig.title.en,
-    description: siteConfig.description.en,
-    url: siteConfig.url,
-    siteName: siteConfig.name,
+    title: `${personalInfo.name} — ${personalInfo.role}`,
+    description: personalInfo.tagline,
+    url: "https://farhan-portfolio-beige.vercel.app",
+    siteName: `${personalInfo.name} Portfolio`,
     images: [
       {
-        url: siteConfig.ogImage,
+        url: personalInfo.avatar,
         width: 1200,
         height: 630,
-        alt: siteConfig.name,
+        alt: `${personalInfo.name} Portfolio`,
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.title.en,
-    description: siteConfig.description.en,
+    title: `${personalInfo.name} — ${personalInfo.role}`,
+    description: personalInfo.tagline,
   },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.variable}>
-        <ThemeProvider>
-          <LangProvider>{children}</LangProvider>
-        </ThemeProvider>
+    <html lang="en" className="dark">
+      <body className={`${inter.variable} font-sans bg-[#080811] text-gray-100 antialiased`}>
+        {children}
       </body>
     </html>
   );

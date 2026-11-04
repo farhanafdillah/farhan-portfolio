@@ -10,25 +10,6 @@ export default function Navbar({ onOpenContact }) {
   const [activeSection, setActiveSection] = useState("home");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 30);
-      const sections = ["home", "about", "projects", "skills", "contact"];
-      const current = sections.find((section) => {
-        const el = document.getElementById(section);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          return rect.top <= 150 && rect.bottom >= 150;
-        }
-        return false;
-      });
-      if (current) setActiveSection(current);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const navItems = [
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
@@ -37,8 +18,58 @@ export default function Navbar({ onOpenContact }) {
     { id: "contact", label: "Contact" },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 30);
+
+      // If at the very top
+      if (window.scrollY < 200) {
+        setActiveSection("home");
+        return;
+      }
+
+      // If near the bottom of the page
+      if (
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 200
+      ) {
+        setActiveSection("contact");
+        return;
+      }
+
+      // Check each section's position relative to the middle of the viewport
+      const targetIds = ["projects", "skills", "about", "contact"];
+      let bestSection = "home";
+      let minDistance = Infinity;
+
+      for (const id of targetIds) {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          // Distance from the top of the viewport (around 150px-250px below navbar)
+          const distance = Math.abs(rect.top - 180);
+          if (rect.top <= window.innerHeight * 0.7 && rect.bottom >= 100) {
+            if (distance < minDistance) {
+              minDistance = distance;
+              bestSection = id;
+            }
+          }
+        }
+      }
+
+      if (bestSection) {
+        setActiveSection(bestSection);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const scrollTo = (id) => {
     setMobileMenuOpen(false);
+    setActiveSection(id); // Immediate visual feedback on click
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -50,7 +81,7 @@ export default function Navbar({ onOpenContact }) {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "py-3 bg-[#080811]/80 backdrop-blur-xl border-b border-purple-500/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
+            ? "py-3 bg-[#080811]/85 backdrop-blur-xl border-b border-purple-500/15 shadow-[0_4px_30px_rgba(0,0,0,0.6)]"
             : "py-5 bg-transparent"
         }`}
       >
@@ -69,14 +100,14 @@ export default function Navbar({ onOpenContact }) {
           </button>
 
           {/* Desktop Nav Links (Pills Center) */}
-          <nav className="hidden md:flex items-center gap-1 px-4 py-1.5 rounded-full bg-[#121224]/70 border border-purple-500/20 backdrop-blur-md shadow-inner">
+          <nav className="hidden md:flex items-center gap-1 px-4 py-1.5 rounded-full bg-[#121224]/80 border border-purple-500/20 backdrop-blur-md shadow-inner">
             {navItems.map((item) => {
               const isActive = activeSection === item.id;
               return (
                 <button
                   key={item.id}
                   onClick={() => scrollTo(item.id)}
-                  className={`relative px-4 py-1.5 text-sm font-medium rounded-full transition-all duration-200 cursor-pointer ${
+                  className={`relative px-4 py-1.5 text-sm font-medium rounded-full transition-colors duration-200 cursor-pointer ${
                     isActive
                       ? "text-white"
                       : "text-gray-400 hover:text-gray-200"
@@ -85,8 +116,8 @@ export default function Navbar({ onOpenContact }) {
                   {isActive && (
                     <motion.div
                       layoutId="activePill"
-                      className="absolute inset-0 bg-gradient-to-r from-purple-600 to-violet-600 rounded-full -z-10 shadow-[0_0_15px_rgba(139,92,246,0.5)]"
-                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                      className="absolute inset-0 bg-gradient-to-r from-purple-600 to-violet-600 rounded-full -z-10 shadow-[0_0_18px_rgba(139,92,246,0.6)]"
+                      transition={{ type: "spring", stiffness: 450, damping: 35 }}
                     />
                   )}
                   {item.label}

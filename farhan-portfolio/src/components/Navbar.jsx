@@ -13,8 +13,8 @@ export default function Navbar({ onOpenContact }) {
   const navItems = [
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
-    { id: "projects", label: "Projects" },
     { id: "skills", label: "Skills" },
+    { id: "projects", label: "Projects" },
     { id: "contact", label: "Contact" },
   ];
 
@@ -22,54 +22,42 @@ export default function Navbar({ onOpenContact }) {
     const handleScroll = () => {
       setScrolled(window.scrollY > 30);
 
-      // If at the very top
+      // Top detection
       if (window.scrollY < 200) {
         setActiveSection("home");
         return;
       }
 
-      // If near the bottom of the page
+      // Bottom detection
       if (
         window.innerHeight + window.scrollY >=
-        document.documentElement.scrollHeight - 200
+        document.documentElement.scrollHeight - 150
       ) {
         setActiveSection("contact");
         return;
       }
 
-      // Check each section's position relative to the middle of the viewport
-      const targetIds = ["projects", "skills", "about", "contact"];
-      let bestSection = "home";
-      let minDistance = Infinity;
-
-      for (const id of targetIds) {
-        const el = document.getElementById(id);
+      // Detect active section based on section elements
+      const sections = ["home", "about", "skills", "projects", "contact"];
+      for (const sectionId of sections) {
+        const el = document.getElementById(sectionId);
         if (el) {
           const rect = el.getBoundingClientRect();
-          // Distance from the top of the viewport (around 150px-250px below navbar)
-          const distance = Math.abs(rect.top - 180);
-          if (rect.top <= window.innerHeight * 0.7 && rect.bottom >= 100) {
-            if (distance < minDistance) {
-              minDistance = distance;
-              bestSection = id;
-            }
+          if (rect.top <= 220 && rect.bottom >= 220) {
+            setActiveSection(sectionId);
+            break;
           }
         }
-      }
-
-      if (bestSection) {
-        setActiveSection(bestSection);
       }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollTo = (id) => {
     setMobileMenuOpen(false);
-    setActiveSection(id); // Immediate visual feedback on click
+    setActiveSection(id);
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -81,7 +69,7 @@ export default function Navbar({ onOpenContact }) {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "py-3 bg-[#080811]/85 backdrop-blur-xl border-b border-purple-500/15 shadow-[0_4px_30px_rgba(0,0,0,0.6)]"
+            ? "py-3 bg-[#080811]/90 backdrop-blur-xl border-b border-purple-500/15 shadow-[0_4px_30px_rgba(0,0,0,0.6)]"
             : "py-5 bg-transparent"
         }`}
       >

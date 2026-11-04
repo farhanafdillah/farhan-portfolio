@@ -43,17 +43,23 @@ export default function Hero({ onOpenIntro }) {
           </div>
 
           {/* Large Hero Title */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.1] mb-5">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.1] mb-3">
             Farhan Bayna
             <br />
-            <span className="text-white">Informatics </span>
             <span className="text-gradient-purple drop-shadow-[0_0_35px_rgba(168,85,247,0.4)]">
-              Student
+              Afdillah
             </span>
           </h1>
 
-          {/* Subtitle / Tagline Asli Farhan */}
-          <p className="text-gray-300 text-base sm:text-lg md:text-xl max-w-xl leading-relaxed mb-8">
+          {/* Role from CV */}
+          <div className="inline-flex items-center gap-2 mb-5">
+            <span className="text-xs sm:text-sm font-mono text-purple-300 bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/25">
+              Informatics Student | Seeking IT / Programming Internship
+            </span>
+          </div>
+
+          {/* Tagline from CV */}
+          <p className="text-gray-300 text-sm sm:text-base md:text-lg max-w-xl leading-relaxed mb-8 text-justify">
             {personalInfo.tagline}
           </p>
 
@@ -162,21 +168,6 @@ export default function Hero({ onOpenIntro }) {
               <div className="absolute inset-0 bg-gradient-to-t from-[#080811] via-transparent to-transparent opacity-60" />
             </div>
           </div>
-
-          {/* Floating Badge: Open to Opportunities */}
-          <motion.div
-            animate={{ y: [0, -6, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -bottom-3 sm:bottom-6 -right-2 sm:right-0 px-4 py-2 rounded-full bg-[#121226]/90 border border-purple-500/40 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.6)] flex items-center gap-2.5 z-20"
-          >
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500 shadow-[0_0_8px_#10B981]"></span>
-            </span>
-            <span className="text-xs font-semibold text-gray-200">
-              {personalInfo.status}
-            </span>
-          </motion.div>
         </motion.div>
       </div>
     </section>

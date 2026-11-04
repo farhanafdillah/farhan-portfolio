@@ -82,8 +82,8 @@ export default function Navbar({ onOpenContact }) {
             <span className="font-extrabold text-xl tracking-wider text-purple-400 group-hover:text-purple-300 transition-colors">
               F/
             </span>
-            <span className="font-bold text-lg text-white group-hover:text-purple-200 transition-colors">
-              {personalInfo.name}
+            <span className="font-bold text-base sm:text-lg text-white group-hover:text-purple-200 transition-colors">
+              Farhan Bayna Afdillah
             </span>
           </button>
 

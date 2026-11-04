@@ -17,8 +17,8 @@ export default function Footer() {
             <span className="font-extrabold text-xl tracking-wider text-purple-400">
               F/
             </span>
-            <span className="font-bold text-lg text-white">
-              {personalInfo.name}
+            <span className="font-bold text-base sm:text-lg text-white">
+              Farhan Bayna Afdillah
             </span>
           </div>
 

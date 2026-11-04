@@ -14,9 +14,9 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Pesan dari ${form.name} - Portofolio`);
+    const subject = encodeURIComponent(`Portfolio Inquiry from ${form.name}`);
     const body = encodeURIComponent(
-      `Nama: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
+      `Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`
     );
     window.open(
       `mailto:${siteConfig.email}?subject=${subject}&body=${body}`,
@@ -87,9 +87,7 @@ export default function Contact() {
                 style={{ background: "linear-gradient(to right, #06b6d4, #2563eb)" }}
               >
                 <Send size={16} />
-                {sent
-                  ? t({ id: "Terkirim! ✓", en: "Sent! ✓" })
-                  : t(contact.form.send)}
+                {sent ? "Message Sent! ✓" : t(contact.form.send)}
               </button>
             </form>
           </FadeInView>
@@ -118,13 +116,13 @@ export default function Contact() {
                 </div>
               </a>
 
-              {/* WhatsApp — nomor tidak ditampilkan, hanya label */}
+              {/* WhatsApp — button only, no phone number shown in public text */}
               <a
                 href={`https://wa.me/${siteConfig.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-green-500/50 hover:shadow-lg transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-green-500"
-                aria-label="Chat via WhatsApp"
+                aria-label="Direct Chat via WhatsApp"
               >
                 <span
                   className="p-3 rounded-xl text-green-500 group-hover:scale-110 transition-transform"
@@ -137,7 +135,7 @@ export default function Contact() {
                     WhatsApp
                   </p>
                   <p className="text-sm font-medium text-gray-800 dark:text-gray-200">
-                    {t({ id: "Chat via WhatsApp", en: "Chat via WhatsApp" })}
+                    Chat on WhatsApp
                   </p>
                 </div>
               </a>
@@ -148,7 +146,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-blue-500/50 hover:shadow-lg transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-blue-500"
-                aria-label="LinkedIn"
+                aria-label="LinkedIn Profile"
               >
                 <span
                   className="p-3 rounded-xl text-blue-500 group-hover:scale-110 transition-transform"
@@ -172,7 +170,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-purple-500/50 hover:shadow-lg transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-purple-500"
-                aria-label="GitHub"
+                aria-label="GitHub Profile"
               >
                 <span
                   className="p-3 rounded-xl text-purple-500 group-hover:scale-110 transition-transform"
@@ -185,7 +183,7 @@ export default function Contact() {
                     GitHub
                   </p>
                   <p className="text-sm font-medium text-gray-800 dark:text-gray-200">
-                    Farhan Bayna Afdillah
+                    @farhanafdillah
                   </p>
                 </div>
               </a>

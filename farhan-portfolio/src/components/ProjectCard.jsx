@@ -31,7 +31,7 @@ export default function ProjectCard({ project }) {
         <h3 className="font-bold text-lg text-gray-900 dark:text-white leading-snug">
           {t(project.title)}
         </h3>
-        <p className="text-sm text-gray-500 dark:text-gray-400 flex-1">
+        <p className="text-sm text-gray-500 dark:text-gray-400 flex-1 text-justify leading-relaxed">
           {t(project.summary)}
         </p>
         <div className="flex flex-wrap gap-2">
@@ -46,7 +46,7 @@ export default function ProjectCard({ project }) {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-xs font-semibold text-cyan-500 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded"
-              aria-label={`Demo ${t(project.title)}`}
+              aria-label={`Demo of ${t(project.title)}`}
             >
               <ExternalLink size={14} /> Demo
             </a>
@@ -55,16 +55,16 @@ export default function ProjectCard({ project }) {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-xs font-semibold text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded"
-              aria-label={`Source code ${t(project.title)}`}
+              aria-label={`Source code of ${t(project.title)}`}
             >
-              <Github size={14} /> Source
+              <Github size={14} /> Code
             </a>
           </div>
           <Link
             href={`/projects/${project.slug}`}
             className="flex items-center gap-1 text-xs font-semibold text-gray-400 hover:text-cyan-500 transition-colors group/link focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded"
           >
-            Detail{" "}
+            Details{" "}
             <ArrowRight
               size={14}
               className="group-hover/link:translate-x-0.5 transition-transform"

@@ -7,7 +7,7 @@ import { Moon, Sun, Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const { dark, toggle: toggleTheme } = useTheme();
-  const { lang, toggle: toggleLang, t } = useLang();
+  const { t } = useLang();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -32,7 +32,9 @@ export default function Navbar() {
         zIndex: 50,
         transition: "all 0.3s",
         backgroundColor: scrolled
-          ? dark ? "rgba(3,7,18,0.92)" : "rgba(255,255,255,0.92)"
+          ? dark
+            ? "rgba(3,7,18,0.92)"
+            : "rgba(255,255,255,0.92)"
           : "transparent",
         backdropFilter: scrolled ? "blur(12px)" : "none",
         boxShadow: scrolled ? "0 1px 20px rgba(0,0,0,0.1)" : "none",
@@ -61,13 +63,6 @@ export default function Navbar() {
 
         {/* Controls */}
         <div className="flex items-center gap-2">
-          <button
-            onClick={toggleLang}
-            className="text-xs font-bold px-2 py-1 rounded border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 hover:border-cyan-500 hover:text-cyan-500 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500"
-            aria-label="Toggle language"
-          >
-            {lang === "id" ? "EN" : "ID"}
-          </button>
           <button
             onClick={toggleTheme}
             className="p-2 rounded-full text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500"

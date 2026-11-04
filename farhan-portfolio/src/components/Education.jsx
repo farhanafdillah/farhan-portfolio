@@ -53,7 +53,7 @@ export default function Education() {
                     <p className="text-sm font-semibold text-cyan-600 dark:text-cyan-400 mb-2">
                       {t(item.degree)}
                     </p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                    <p className="text-sm text-gray-500 dark:text-gray-400 text-justify leading-relaxed">
                       {t(item.description)}
                     </p>
                   </div>

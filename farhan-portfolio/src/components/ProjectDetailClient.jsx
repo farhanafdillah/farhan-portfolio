@@ -16,7 +16,9 @@ export default function ProjectDetailClient({ project }) {
       <h3 className="text-sm font-bold uppercase tracking-widest text-cyan-500 mb-3">
         {title}
       </h3>
-      <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{children}</p>
+      <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-justify">
+        {children}
+      </p>
     </div>
   );
 
@@ -30,7 +32,7 @@ export default function ProjectDetailClient({ project }) {
             className="inline-flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-cyan-500 transition-colors mb-8 focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded"
           >
             <ArrowLeft size={16} />
-            {t({ id: "Kembali ke Beranda", en: "Back to Home" })}
+            Back to Home
           </Link>
 
           {/* Hero image */}
@@ -59,18 +61,18 @@ export default function ProjectDetailClient({ project }) {
           <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
             {t(project.title)}
           </h1>
-          <p className="text-lg text-gray-500 dark:text-gray-400 mb-10">
+          <p className="text-lg text-gray-500 dark:text-gray-400 mb-10 text-justify leading-relaxed">
             {t(project.summary)}
           </p>
 
           <div className="p-6 md:p-8 rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-            <Section title={t({ id: "Masalah", en: "Problem" })}>
+            <Section title="Problem & Challenges">
               {t(project.detail.problem)}
             </Section>
-            <Section title={t({ id: "Solusi", en: "Solution" })}>
+            <Section title="Engineering Solution">
               {t(project.detail.solution)}
             </Section>
-            <Section title={t({ id: "Hasil", en: "Result" })}>
+            <Section title="Key Results & Outcome">
               {t(project.detail.result)}
             </Section>
           </div>
@@ -83,7 +85,7 @@ export default function ProjectDetailClient({ project }) {
               className="flex items-center gap-2 px-6 py-3 rounded-full text-white font-semibold transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2"
               style={{ background: "linear-gradient(to right, #06b6d4, #2563eb)" }}
             >
-              <ExternalLink size={16} /> Demo
+              <ExternalLink size={16} /> Live Demo
             </a>
             <a
               href={project.source}

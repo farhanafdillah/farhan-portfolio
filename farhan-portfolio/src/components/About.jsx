@@ -16,7 +16,7 @@ export default function About() {
           <SectionTitle>{t(about.title)}</SectionTitle>
         </FadeInView>
         <FadeInView delay={100}>
-          <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed text-center md:text-left mb-10">
+          <p className="text-gray-600 dark:text-gray-400 text-base md:text-lg leading-relaxed text-justify mb-10">
             {t(about.body)}
           </p>
         </FadeInView>

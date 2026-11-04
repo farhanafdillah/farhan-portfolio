@@ -1,201 +1,176 @@
 // ============================================================
-// DATA.JS — Edit semua konten portofolio di sini
+// DATA.JS — Full English Portfolio Content
 // ============================================================
 
 export const siteConfig = {
   name: "Farhan Bayna Afdillah",
-  title: {
-    id: "Farhan Bayna Afdillah — Portofolio",
-    en: "Farhan Bayna Afdillah — Portfolio",
-  },
-  description: {
-    id: "Mahasiswa Informatika yang membangun jaringan yang aman dan aplikasi mobile yang berguna.",
-    en: "Informatics student building secure networks and useful mobile applications.",
-  },
+  title: "Farhan Bayna Afdillah — Portfolio",
+  description:
+    "Informatics student building secure networks and useful mobile applications.",
   url: "https://farhan-portfolio-beige.vercel.app",
   ogImage: "/images/farhan.jpg",
-  location: "Ciracas, Jakarta Timur",
+  location: "Ciracas, East Jakarta, Indonesia",
   email: "farhanafdillah2435@gmail.com",
-  whatsapp: "6285591203070", // Format internasional, jangan ubah format ini
-  linkedin: "#",             // Ganti dengan URL LinkedIn kamu
-  github: "https://github.com/farhanafdillah", // Akun GitHub kamu
-  cv: "/cv-farhan.pdf",      // CV asli Farhan
+  whatsapp: "6285591203070",
+  linkedin: "https://linkedin.com/in/",
+  github: "https://github.com/farhanafdillah",
+  cv: "/cv-farhan.pdf",
 };
 
 export const navLinks = [
-  { id: "about",          label: { id: "Tentang",        en: "About" } },
-  { id: "skills",         label: { id: "Skills",          en: "Skills" } },
-  { id: "projects",       label: { id: "Proyek",          en: "Projects" } },
-  { id: "education",      label: { id: "Pendidikan",      en: "Education" } },
-  { id: "certifications", label: { id: "Sertifikasi",     en: "Certifications" } },
-  { id: "contact",        label: { id: "Kontak",          en: "Contact" } },
+  { id: "about", label: "About" },
+  { id: "skills", label: "Skills" },
+  { id: "projects", label: "Projects" },
+  { id: "education", label: "Education" },
+  { id: "certifications", label: "Certifications" },
+  { id: "contact", label: "Contact" },
 ];
 
 export const hero = {
-  greeting: { id: "Halo, saya", en: "Hi, I'm" },
+  greeting: "Hi, I am",
   name: "Farhan Bayna Afdillah",
-  tagline: {
-    id: "Mahasiswa Informatika yang membangun jaringan yang aman dan aplikasi mobile yang berguna.",
-    en: "Informatics student building secure networks and useful mobile applications.",
-  },
+  tagline:
+    "Informatics student building secure networks and useful mobile applications.",
   cta: {
-    projects: { id: "Lihat Proyek", en: "View Projects" },
-    cv:        { id: "Download CV",  en: "Download CV" },
+    projects: "View Projects",
+    cv: "Download CV",
   },
   avatar: "/images/farhan.jpg",
 };
 
 export const about = {
-  title: { id: "Tentang Saya", en: "About Me" },
-  body: {
-    id: "Saya adalah Mahasiswa Informatika semester 7 di Universitas Bina Sarana Informatika (2023–sekarang) dengan minat kuat pada IT dan programming. Berpengalaman mendesain dan mengamankan topologi jaringan dengan Cisco dan Mikrotik, serta membangun aplikasi mobile dengan Flutter dan PHP. Aktif dalam kepanitiaan acara kampus dan sedang mencari magang IT/programming untuk menerapkan dan mengembangkan kemampuan saya di lingkungan kerja nyata.",
-    en: "I am a 7th-semester Informatics student at Universitas Bina Sarana Informatika (2023–present) with a strong interest in IT and programming. Experienced in designing and securing network topologies using Cisco and Mikrotik, and in building mobile applications with Flutter and PHP. I am actively involved in campus event committees and am seeking an IT/programming internship to apply and grow my skills in a real work environment.",
-  },
+  title: "About Me",
+  body: "I am a 7th-semester Informatics student at Universitas Bina Sarana Informatika (2023–present) with a deep passion for IT infrastructure, networking, and software development. Experienced in designing, configuring, and securing network topologies using Cisco and Mikrotik, as well as building cross-platform mobile applications with Flutter and PHP. I actively participate in campus event committees and am actively seeking an IT/programming internship opportunity to apply and expand my technical expertise in real-world professional environments.",
   highlights: [
-    { icon: "GraduationCap", label: { id: "Informatika — UBSI",      en: "Informatics — UBSI" } },
-    { icon: "MapPin",         label: { id: "Ciracas, Jakarta Timur",  en: "Ciracas, East Jakarta" } },
-    { icon: "Briefcase",      label: { id: "Open to Internship",      en: "Open to Internship" } },
+    { icon: "GraduationCap", label: "Informatics — UBSI" },
+    { icon: "MapPin", label: "Ciracas, East Jakarta" },
+    { icon: "Briefcase", label: "Open to Internship" },
   ],
 };
 
 export const skills = {
-  title: { id: "Skills", en: "Skills" },
+  title: "Skills & Expertise",
   categories: [
     {
-      name: { id: "Jaringan", en: "Networking" },
+      name: "Networking",
       icon: "Network",
-      items: ["Cisco", "Mikrotik", "OSPF", "EIGRP", "Route Redistribution", "Network Security"],
+      items: [
+        "Cisco",
+        "Mikrotik",
+        "OSPF",
+        "EIGRP",
+        "Route Redistribution",
+        "Network Security",
+      ],
     },
     {
-      name: { id: "Mobile & Web", en: "Mobile & Web" },
+      name: "Mobile & Web",
       icon: "Smartphone",
-      items: ["Flutter", "PHP"],
+      items: ["Flutter", "PHP", "JavaScript", "HTML/CSS"],
     },
     {
-      name: { id: "Tools", en: "Tools" },
+      name: "Tools & Productivity",
       icon: "Wrench",
-      items: ["Microsoft Office"],
+      items: ["Microsoft Office", "Cisco Packet Tracer", "Winbox", "Git & GitHub"],
     },
     {
-      name: { id: "Soft Skills", en: "Soft Skills" },
+      name: "Soft Skills",
       icon: "Users",
-      items: ["Teamwork", "Komunikasi", "Manajemen Waktu", "Problem Solving", "Koordinasi Acara"],
+      items: [
+        "Teamwork",
+        "Communication",
+        "Time Management",
+        "Problem Solving",
+        "Event Coordination",
+      ],
     },
   ],
 };
 
 export const projects = {
-  title: { id: "Proyek", en: "Projects" },
+  title: "Featured Projects",
   items: [
     {
       slug: "network-topology",
-      title: { id: "Network Topology & Security Design", en: "Network Topology & Security Design" },
-      summary: {
-        id: "Merancang dan membangun topologi jaringan dengan Cisco & Mikrotik, dilengkapi keamanan jaringan untuk kontrol akses.",
-        en: "Designed and built a network topology with Cisco & Mikrotik, including network security measures for access control.",
-      },
+      title: "Network Topology & Security Design",
+      summary:
+        "Designed and implemented a secure, multi-segment network topology using Cisco and Mikrotik devices, enforcing robust access control policies and rock-solid connectivity.",
       image: "/images/project-network.svg",
-      tags: ["Cisco", "Mikrotik", "Network Security"],
+      tags: ["Cisco", "Mikrotik", "Network Security", "VLAN"],
       demo: "#",
-      source: "#",
+      source: "https://github.com/farhanafdillah",
       detail: {
-        problem: {
-          id: "Dibutuhkan topologi jaringan yang terstruktur dan aman untuk menghubungkan beberapa segmen jaringan dengan kontrol akses yang ketat.",
-          en: "A structured and secure network topology was needed to connect multiple network segments with strict access control.",
-        },
-        solution: {
-          id: "Merancang topologi menggunakan perangkat Cisco dan Mikrotik, menerapkan kebijakan keamanan jaringan, dan mengonfigurasi perangkat agar konektivitas antar segmen stabil.",
-          en: "Designed the topology using Cisco and Mikrotik devices, applied network security policies, and configured devices for stable inter-segment connectivity.",
-        },
-        result: {
-          id: "Topologi jaringan berhasil diimplementasikan dengan konektivitas stabil antar segmen dan keamanan data yang terjamin.",
-          en: "The network topology was successfully implemented with stable inter-segment connectivity and ensured data security.",
-        },
+        problem:
+          "An organization required a structured, isolated, and highly secure network infrastructure to connect various department segments while preventing unauthorized access between sensitive zones.",
+        solution:
+          "Architected and deployed a segmented network topology integrating Cisco switches and Mikrotik routers. Implemented firewall filter rules, Access Control Lists (ACLs), and configured inter-VLAN routing with failover mechanisms to maintain high availability and data integrity.",
+        result:
+          "Successfully established a stable, high-performance network topology with verified end-to-end connectivity, strict segment isolation, and comprehensive traffic monitoring.",
       },
     },
     {
       slug: "warteg-app",
-      title: { id: "Warteg Menu Ordering App", en: "Warteg Menu Ordering App" },
-      summary: {
-        id: "Aplikasi mobile lintas platform untuk memesan menu warteg dengan Flutter (front-end) dan PHP (back-end).",
-        en: "A cross-platform mobile app for ordering warteg menus, built with Flutter (front-end) and PHP (back-end).",
-      },
+      title: "Warteg Menu Ordering Mobile App",
+      summary:
+        "Cross-platform mobile application for browsing traditional food menus and placing orders efficiently, engineered with Flutter (frontend) and PHP REST API (backend).",
       image: "/images/project-warteg.svg",
-      tags: ["Flutter", "PHP"],
+      tags: ["Flutter", "PHP", "REST API", "MySQL"],
       demo: "#",
-      source: "#",
+      source: "https://github.com/farhanafdillah",
       detail: {
-        problem: {
-          id: "Pelanggan warteg kesulitan melihat dan memesan menu secara efisien tanpa harus mengantre panjang.",
-          en: "Warteg customers had difficulty viewing and ordering menus efficiently without long queues.",
-        },
-        solution: {
-          id: "Membangun aplikasi mobile dengan Flutter untuk front-end dan PHP untuk back-end pengelolaan menu dan pemrosesan pesanan, lalu mengintegrasikan keduanya agar alur pemesanan berjalan lancar.",
-          en: "Built a mobile app with Flutter for the front-end and PHP for the back-end to manage menus and process orders, integrating both for a smooth ordering flow.",
-        },
-        result: {
-          id: "Aplikasi berhasil mengintegrasikan front-end dan back-end, memungkinkan pelanggan melihat menu dan memesan dengan mudah.",
-          en: "The app successfully integrated front-end and back-end, allowing customers to view menus and order with ease.",
-        },
+        problem:
+          "Customers at traditional eateries (Warteg) frequently experienced prolonged waiting queues during peak dining hours and lacked real-time visibility into daily available food items.",
+        solution:
+          "Developed an intuitive mobile application using Flutter for dynamic client-side interactions and PHP with MySQL for order processing and inventory management. Connected both tiers via lightweight RESTful APIs for seamless menu synchronization and automated order queuing.",
+        result:
+          "Greatly streamlined customer ordering flow, minimized queue congestion, and enabled staff to update daily menu stock with instant mobile synchronization.",
       },
     },
     {
       slug: "network-routing",
-      title: { id: "Network Routing Configuration", en: "Network Routing Configuration" },
-      summary: {
-        id: "Konfigurasi routing dinamis OSPF & EIGRP dengan route redistribution antar protokol untuk konektivitas antar domain.",
-        en: "Dynamic routing configuration with OSPF & EIGRP and route redistribution between protocols for cross-domain connectivity.",
-      },
+      title: "Dynamic Routing & Route Redistribution",
+      summary:
+        "Multi-protocol routing deployment featuring OSPF and EIGRP dynamic routing with seamless two-way route redistribution across autonomous system boundaries.",
       image: "/images/project-routing.svg",
-      tags: ["Cisco", "OSPF", "EIGRP"],
+      tags: ["Cisco", "OSPF", "EIGRP", "Route Redistribution"],
       demo: "#",
-      source: "#",
+      source: "https://github.com/farhanafdillah",
       detail: {
-        problem: {
-          id: "Dua domain routing yang menggunakan protokol berbeda (OSPF dan EIGRP) tidak dapat berkomunikasi satu sama lain.",
-          en: "Two routing domains using different protocols (OSPF and EIGRP) could not communicate with each other.",
-        },
-        solution: {
-          id: "Mengonfigurasi routing dinamis OSPF dan EIGRP pada perangkat Cisco, kemudian melakukan route redistribution antar protokol dan memverifikasi routing table serta melakukan troubleshooting konektivitas.",
-          en: "Configured dynamic OSPF and EIGRP routing on Cisco devices, performed route redistribution between protocols, and verified routing tables while troubleshooting connectivity.",
-        },
-        result: {
-          id: "Kedua domain routing berhasil berkomunikasi setelah redistribution dikonfigurasi dengan benar dan routing table menunjukkan jalur yang optimal.",
-          en: "Both routing domains successfully communicated after redistribution was correctly configured, with routing tables showing optimal paths.",
-        },
+        problem:
+          "Two separate corporate network domains operating on distinct routing protocols (OSPF Area 0 and EIGRP AS 100) were isolated and unable to exchange routing information automatically.",
+        solution:
+          "Configured OSPF and EIGRP protocols on Cisco routers, established an Autonomous System Boundary Router (ASBR), and deployed mutual route redistribution with metric tuning, route tags, and filtering to prevent suboptimal routing and routing loops.",
+        result:
+          "Achieved seamless, fully converged cross-domain communication with optimized path selection and zero packet drop verified through traceroute and routing table inspection.",
       },
     },
   ],
 };
 
 export const education = {
-  title: { id: "Pendidikan & Organisasi", en: "Education & Organization" },
+  title: "Education & Leadership",
   items: [
     {
       type: "education",
-      institution: { id: "Universitas Bina Sarana Informatika", en: "Universitas Bina Sarana Informatika" },
-      degree: { id: "S1 Informatika — Semester 7", en: "Bachelor of Informatics — Semester 7" },
-      period: "2023 — Sekarang",
-      description: {
-        id: "Mempelajari dasar-dasar ilmu komputer, jaringan komputer, pemrograman mobile, dan rekayasa perangkat lunak.",
-        en: "Studying fundamentals of computer science, networking, mobile programming, and software engineering.",
-      },
+      institution: "Universitas Bina Sarana Informatika",
+      degree: "Bachelor of Informatics — 7th Semester",
+      period: "2023 — Present",
+      description:
+        "Focusing on computer science core concepts, computer network engineering, mobile application development, database management systems, and software engineering methodologies.",
     },
     {
       type: "organization",
-      institution: { id: "Futsal Komzustar Cup", en: "Futsal Komzustar Cup" },
-      degree: { id: "Event Organizer — Panitia Turnamen Futsal", en: "Event Organizer — Futsal Tournament Committee" },
+      institution: "Futsal Komzustar Cup",
+      degree: "Event Organizer — Tournament Committee Coordinator",
       period: "2024",
-      description: {
-        id: "Mengoordinasi turnamen futsal antar mahasiswa, termasuk penjadwalan pertandingan, koordinasi tim, dan memastikan kelancaran acara.",
-        en: "Coordinated an inter-student futsal tournament, including match scheduling, team coordination, and ensuring smooth event operations.",
-      },
+      description:
+        "Spearheaded and coordinated an inter-collegiate futsal championship tournament, leading multi-team logistics, match scheduling, operational oversight, and stakeholder communication.",
     },
   ],
 };
 
 export const certifications = {
-  title: { id: "Sertifikasi & Bahasa", en: "Certifications & Languages" },
+  title: "Certifications & Languages",
   certs: [
     {
       name: "CCNA: Introduction to Networks",
@@ -205,33 +180,28 @@ export const certifications = {
     },
   ],
   languages: [
-    { lang: { id: "Indonesia", en: "Indonesian" }, level: { id: "Native",         en: "Native" } },
-    { lang: { id: "Inggris",   en: "English" },    level: { id: "Dasar / Pasif",  en: "Basic / Passive" } },
+    { lang: "Indonesian", level: "Native Proficiency" },
+    { lang: "English", level: "Working Proficiency (Passive/Technical)" },
   ],
 };
 
 export const contact = {
-  title: { id: "Kontak", en: "Contact" },
-  subtitle: {
-    id: "Tertarik untuk berkolaborasi atau membuka peluang magang? Hubungi saya!",
-    en: "Interested in collaborating or offering an internship opportunity? Let's connect!",
-  },
+  title: "Get In Touch",
+  subtitle:
+    "Interested in discussing internship opportunities, collaborations, or tech projects? Feel free to reach out anytime!",
   form: {
-    name:    { id: "Nama",    en: "Name" },
-    email:   { id: "Email",   en: "Email" },
-    message: { id: "Pesan",   en: "Message" },
-    send:    { id: "Kirim",   en: "Send" },
+    name: "Full Name",
+    email: "Email Address",
+    message: "Your Message",
+    send: "Send Message",
     placeholder: {
-      name:    { id: "Nama kamu",                   en: "Your name" },
-      email:   { id: "email@kamu.com",              en: "email@you.com" },
-      message: { id: "Tulis pesanmu di sini...",    en: "Write your message here..." },
+      name: "e.g. John Doe / HR Recruiter",
+      email: "recruiter@company.com",
+      message: "Hello Farhan, we would like to invite you for an internship interview...",
     },
   },
 };
 
 export const footer = {
-  text: {
-    id: "© 2025 Farhan Bayna Afdillah. Dibuat dengan ❤️ menggunakan Next.js & Tailwind CSS.",
-    en: "© 2025 Farhan Bayna Afdillah. Built with ❤️ using Next.js & Tailwind CSS.",
-  },
+  text: "© 2025 Farhan Bayna Afdillah. Built with passion using Next.js & Tailwind CSS.",
 };

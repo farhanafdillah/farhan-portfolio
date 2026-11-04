@@ -43,17 +43,17 @@ export default function Hero({ onOpenIntro }) {
           </div>
 
           {/* Large Hero Title */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-white leading-[1.05] mb-6">
-            Farhan
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.1] mb-5">
+            Farhan Bayna
             <br />
-            <span className="text-white">Web </span>
+            <span className="text-white">Informatics </span>
             <span className="text-gradient-purple drop-shadow-[0_0_35px_rgba(168,85,247,0.4)]">
-              Developer
+              Student
             </span>
           </h1>
 
-          {/* Subtitle / Tagline */}
-          <p className="text-gray-400 text-base sm:text-lg md:text-xl max-w-xl leading-relaxed mb-8">
+          {/* Subtitle / Tagline Asli Farhan */}
+          <p className="text-gray-300 text-base sm:text-lg md:text-xl max-w-xl leading-relaxed mb-8">
             {personalInfo.tagline}
           </p>
 

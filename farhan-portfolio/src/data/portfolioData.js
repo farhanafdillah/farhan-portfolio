@@ -1,20 +1,19 @@
 // Portfolio Data for Farhan - Bento Grid Futuristic Edition
 
 export const personalInfo = {
-  name: "Farhan",
+  name: "Farhan Bayna",
   fullName: "Farhan Bayna Afdillah",
-  role: "Web Developer",
-  subRole: "Informatics Student & Network Enthusiast",
+  role: "Informatics Student",
+  subRole: "Network Engineering & Mobile Development",
   greeting: "Hello, I'm",
-  headline: "Farhan",
-  tagline: "I build modern and interactive web experiences with clean code and creative design.",
-  extendedBio: "A passionate 7th-semester Informatics student at Universitas Bina Sarana Informatika (2023–present). Focused on developing scalable, user-friendly web applications, cross-platform mobile apps (Flutter & PHP), and secure network infrastructures (Cisco & Mikrotik).",
-  status: "Open to Opportunities",
+  tagline: "An Informatics student who builds secure networks and useful mobile applications.",
+  extendedBio: "A passionate 7th-semester Informatics student at Universitas Bina Sarana Informatika (2023–present). Experienced in designing and securing network topologies using Cisco and Mikrotik, as well as building cross-platform mobile applications with Flutter and PHP. Actively seeking an IT/programming internship to apply and expand technical capabilities in real-world environments.",
+  status: "Open to IT Internship",
   avatar: "/images/farhan.jpg",
   cv: "/cv-farhan.pdf",
   email: "farhanafdillah2435@gmail.com",
   whatsapp: "6285591203070",
-  location: "Jakarta, Indonesia",
+  location: "Ciracas, East Jakarta, Indonesia",
   socials: {
     github: "https://github.com/farhanafdillah",
     linkedin: "https://linkedin.com/in/",

@@ -12,7 +12,8 @@ export const personalInfo = {
   avatar: "/images/farhan.jpg",
   cv: "/cv-farhan.pdf",
   email: "farhanafdillah2435@gmail.com",
-  whatsapp: "6285591203070",
+  whatsapp: "6287896636884",
+  phone: "+6287896636884",
   location: "Ciracas, East Jakarta, Indonesia",
   socials: {
     github: "https://github.com/farhanafdillah",
